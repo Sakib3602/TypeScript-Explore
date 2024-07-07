@@ -30,7 +30,6 @@
 
   teacher = [22, "akib", 24, 323];
 
-
   function getStudent(name?: string, id?: number) {
     // parameter's type annotation
     // here ? means optional
@@ -57,33 +56,48 @@
     return [23, "Alice", "sksoism"];
   }
 
-  function opponent(item : string, item2: number ) : Array<string | number>{
-
-    return [24,"sakib",23 , "dsidis", 22 ,32]
-
+  function opponent(item: string, item2: number): Array<string | number> {
+    return [24, "sakib", 23, "dsidis", 22, 32];
   }
 
-  let don : (string | boolean)[] = []
-  let don1 : number[] = []
+
+  const yu : ( string | number)[] = []
+
+  yu.push("0",23)
   
-  don1.push(22,232)
 
-  don.push("sakib" , true)
+  let ruser : [string,number,boolean] 
 
+  ruser = ["lol",23,true]
+  
+  const kol : readonly(string | number)[] = ["op",32]
+
+  // kol.push("pop",90)   readonly cannot push
+
+  let don: (string | boolean)[] = [];
+  // let don1: number[] = [];   its same 
+  let don1: Array<number> = [];
+
+  don1.push(22, 232);
+
+  don.push("sakib", true);
+
+  // when using type must be call like pop
   type User = {
-    name : string,
-    number: number,
-    email: string,
-    stu? : boolean
-
+    name: string;
+    number: number;
+    email: string;
+    stu?: boolean;
+  };
+  function pop(user: User): Array<User> {
+    const { name, number, email, stu } = user;
+    return [
+      { name, number, email, stu },
+      { name, number, email, stu },
+    ];
   }
-  function pop(user : User) : object{
 
-    const {name,number,email,stu} = user
-    return {name,number,email,stu}
-
-  }
-  pop({name: "sakib", number: 23, email : "diosks"})
+  pop({ number: 23, name: "sakib", email: "diosks" });
 
   //
 }
