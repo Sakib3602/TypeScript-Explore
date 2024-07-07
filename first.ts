@@ -99,5 +99,95 @@
 
   pop({ number: 23, name: "sakib", email: "diosks" });
 
+  function yui(d : number) : (string | number) {
+    if(d > 6){
+      return 23
+    }
+
+    return "kokkk"
+
+  }
+
+
+  // object type 
+
+  type Yp = {name : string; id: number; stu?: boolean}
+
+  // we can use Yp here as a params type
+  function obj(x : {name : string; id: number; stu?: boolean}) : object[] {
+ 
+    return [x]
+  }
+
+  obj({name : "lolipop", id: 233, stu : true})
+
+
+  interface Animal {
+    name: string,
+    cate: boolean,
+    id: number
+  }
+
+  // const x = "hello" as number;   not possible
+  const a = "expr" as any as number;  //this is ok
+
+  let di : "opBro" ;
+
+  // di = "opBrop"  here must value match with type
+  di = "opBro"
+
+  // here must alignment value will be 3 of them
+  function printText(s: string, alignment: "left" | "right" | "center") {
+    // ...
+  }
+  printText("Hello, world", "left");
+  printText("G'day", "center");   
+
+  const qw = (f : string, pop : 10 | 20 | 30)=>{
+//....
+  }
+
+  qw("lolopop",10)  
+
+  // enum
+
+  enum Seat{
+    first = "first",
+    second = "hop"
+   
+  }
+
+  function p(x : Seat) : Seat{
+    return x
+
+  }
+
+  p(Seat.first)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   //
 }
